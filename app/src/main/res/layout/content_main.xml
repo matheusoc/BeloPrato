@@ -49,6 +49,18 @@
             android:text="Mesas"
             android:textAllCaps="false"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:textSize="20dp"
+            android:textColor="#e1e1e1"
+            android:text="Cadastrar cliente"
+            android:textAllCaps="false"/>
+
     </LinearLayout>
 
 </LinearLayout>
