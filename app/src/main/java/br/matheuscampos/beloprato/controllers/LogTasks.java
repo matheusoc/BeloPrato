@@ -220,7 +220,12 @@ public class LogTasks {
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-
+                            mLoginActivity.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    mLoginActivity.setLoginVisibility();
+                                }
+                            });
                         }
             });
             queue.add(postRequest);
