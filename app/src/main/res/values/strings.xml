@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Belo Prato</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="hint_username">Nome de Usuário</string>
+    <string name="hint_password">Senha</string>
+    <string name="enter">Entrar</string>
+
+    <string name="positive_button">OK</string>
+    <string name="login">Login</string>
+    <string name="doing_login">Logando...</string>
+    <string name="logout">Logout</string>
+    <string name="doing_logout">Deslogando...</string>
+
+    <string name="shared_users">br.matheuscampos.beloprato.USER_INFO</string>
+
+</resources>
