@@ -21,16 +21,17 @@ public class Preferences {
         this.mContext = context;
     }
 
-    public void saveUser (String username, String password) {
+    public void saveUser (String id, String username, String password) {
         preferences = mContext.getSharedPreferences(mContext.getString(R.string.shared_users),
                 Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(Constants.ID, id);
         editor.putString(Constants.USER, username);
         editor.putString(Constants.PASSWORD, password);
         editor.commit();
     }
 
-    public HashMap<String, String> getUser () {
+    public HashMap<String, String> getUserToLogin() {
         preferences = mContext.getSharedPreferences(mContext.getString(R.string.shared_users),
                 Context.MODE_PRIVATE);
         HashMap<String, String> map = new HashMap<>();
@@ -43,6 +44,7 @@ public class Preferences {
         preferences = mContext.getSharedPreferences(mContext.getString(R.string.shared_users),
                 Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
+        editor.remove(Constants.ID);
         editor.remove(Constants.USER);
         editor.remove(Constants.PASSWORD);
         editor.commit();

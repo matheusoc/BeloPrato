@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Belo Prato</string>
+    <string name="app_order">Fazer pedidos</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -15,6 +16,12 @@
     <string name="doing_login">Logando...</string>
     <string name="logout">Logout</string>
     <string name="doing_logout">Deslogando...</string>
+
+    <string name="desk">Mesa</string>
+    <string name="client">Cliente</string>
+
+    <string name="search_client">Pesquisar cliente</string>
+    <string name="select">Selecionar</string>
 
     <string name="shared_users">br.matheuscampos.beloprato.USER_INFO</string>
 

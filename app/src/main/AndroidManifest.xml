@@ -28,6 +28,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
 
+        <activity
+            android:name=".view.OrderActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_order"/>
+
     </application>
 
 </manifest>

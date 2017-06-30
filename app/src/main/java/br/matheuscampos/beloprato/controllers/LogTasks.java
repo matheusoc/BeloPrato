@@ -92,16 +92,19 @@ public class LogTasks {
                     @Override
                     public void onResponse(JSONObject response) {
 
-                        String ans;
+                        String ans, id;
                         try {
                             ans = response.getString("status");
+                            id = response.getString("id");
                         } catch (JSONException e) {
                             ans = "Erro ao receber resposta";
+                            id = "error";
                         }
-                        if (ans.equals(Constants.LOGGED) || ans.equals(Constants.ALOGGED)) {
+                        if (ans.equals(Constants.LOGGED) || ans.equals(Constants.ALOGGED)
+                                && !id.equals("error")) {
                             Intent intent = new Intent(mContext, MainActivity.class);
                             mContext.startActivity(intent);
-                            mPreferences.saveUser(username, password);
+                            mPreferences.saveUser(id, username, password);
                             mLoginActivity.finish();
                         } else
                             mAlertDialog.setMessage(ans).show();
@@ -125,7 +128,7 @@ public class LogTasks {
     public void logout() {
         RequestQueue queue = Volley.newRequestQueue(mContext);
         JSONObject object = new JSONObject();
-        HashMap<String, String> map = mPreferences.getUser();
+        HashMap<String, String> map = mPreferences.getUserToLogin();
         String username = map.get(Constants.USER);
 
         mProgressDialog.setTitle(mContext.getString(R.string.logout));
@@ -180,7 +183,7 @@ public class LogTasks {
     public void loginSaved() {
         RequestQueue queue = Volley.newRequestQueue(mContext);
         JSONObject object = new JSONObject();
-        HashMap<String, String> map = mPreferences.getUser();
+        HashMap<String, String> map = mPreferences.getUserToLogin();
         String username = map.get(Constants.USER);
         String password = map.get(Constants.PASSWORD);
 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/clientListRelativeLayout"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/ClientName"
+        android:layout_alignBaseline="@+id/selectClientButton"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@id/selectClientButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="17dp" />
+
+    <Button
+        android:id="@+id/selectClientButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="@string/select"
+        android:textAllCaps="false"
+        style="?android:borderlessButtonStyle"/>
+
+</RelativeLayout>

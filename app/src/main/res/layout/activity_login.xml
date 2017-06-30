@@ -5,11 +5,11 @@
     android:weightSum="1"
     android:padding="10dp">
 
-    <View
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:background="@drawable/beloprato"
-        android:layout_weight="0.80" />
+        android:layout_weight="0.75" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
